@@ -1,142 +1,96 @@
 // Food
 
-import 'package:_food_delivery_ui_practice/models/food.dart';
-import 'package:_food_delivery_ui_practice/models/order.dart';
-import 'package:_food_delivery_ui_practice/models/restaurant.dart';
-import 'package:_food_delivery_ui_practice/models/user.dart';
+import 'package:montoya/models/Pc.dart';
+import 'package:montoya/models/orden.dart';
+import 'package:montoya/models/tienda.dart';
+import 'package:montoya/models/usuario.dart';
 
-final _burrito =
-    Food(imageUrl: "assets/images/burrito.jpg", name: "Burrito", price: 8.99);
+final _Laptop =
+    Pc(imageUrl: "assets/images/71E.jpg", nombre: "Laptop", price: 8.99);
 
-final _steak =
-    Food(imageUrl: "assets/images/steak.jpg", name: "Steak", price: 17.99);
+final _Audifonos = Pc(
+    imageUrl: "assets/images/audifonos.jpg", nombre: "Audifonos", price: 17.99);
 
-final _pasta =
-    Food(imageUrl: "assets/images/pasta.jpg", name: "Pasta", price: 14.99);
+final _LaptopDelux = Pc(
+    imageUrl: "assets/images/71T.jpg", nombre: "Laptop  Delux", price: 14.99);
 
-final _ramen =
-    Food(imageUrl: "assets/images/ramen.jpg", name: "Ramen", price: 13.99);
+final _Perifericos =
+    Pc(imageUrl: "assets/images/krom.jpg", nombre: "Perifericos", price: 13.99);
 
-final _pancakes =
-    Food(imageUrl: "assets/images/pancakes.jpg", name: "Pancakes", price: 9.99);
+final _Mouse =
+    Pc(imageUrl: "assets/images/mouse.jpg", nombre: "Mouse", price: 9.99);
 
-final _burger =
-    Food(imageUrl: "assets/images/burger.jpg", name: "Burger", price: 14.99);
+final _LaptopNew = Pc(
+    imageUrl: "assets/images/laptop.jpg", nombre: "Laptop  New", price: 14.99);
 
-final _pizza =
-    Food(imageUrl: "assets/images/pizza.jpg", name: "Pizza", price: 11.99);
+final _PCRGB =
+    Pc(imageUrl: "assets/images/pc.jpg", nombre: "PC-RGB", price: 11.99);
 
-final _salmon = Food(
-    imageUrl: "assets/images/salmon.jpg", name: "Salmon Salad", price: 12.99);
+final _Redragon = Pc(
+    imageUrl: "assets/images/redragon.jpg", nombre: "Redragon", price: 12.99);
 
 // Restaurants
 
-final _restaurant0 = Restaurant(
-    imageUrl: "assets/images/restaurant0.jpg",
-    name: "Haveli Restaurant",
-    address: "2170-A Food St Fort Rd",
+final _tienda1 = Tienda(
+    imageUrl: "assets/images/tienda-1.jpg",
+    nombre: "ByteTech",
+    direccion: "2170-A Tienda Rd",
     rating: 5,
     menu: [
-      _burrito,
-      _steak,
-      _pasta,
-      _ramen,
-      _pancakes,
-      _burger,
-      _pizza,
-      _salmon
+      _Laptop,
+      _Audifonos,
+      _LaptopDelux,
+      _Perifericos,
+      _Mouse,
+      _LaptopNew,
+      _PCRGB,
+      _Redragon
     ]);
 
-final _restaurant1 = Restaurant(
-    imageUrl: "assets/images/restaurant1.jpg",
-    name: "Andaaz Restaurant",
-    address: "2189 A Fort Rd",
+final _tienda2 = Tienda(
+    imageUrl: "assets/images/tienda-2.jpg",
+    nombre: "Tech Depott",
+    direccion: "2189 Tienda GT",
     rating: 4.1,
-    menu: [_steak, _pasta, _ramen, _pancakes, _burger, _pizza]);
+    menu: [_Audifonos, _LaptopDelux, _Perifericos, _Mouse, _LaptopNew, _PCRGB]);
 
-final _restaurant2 = Restaurant(
-    imageUrl: "assets/images/restaurant2.jpg",
-    name: "Monal Restaurant",
-    address: "Plaza Liberty Park",
+final _tienda3 = Tienda(
+    imageUrl: "assets/images/tienda-3.jpg",
+    nombre: "Cyberzone",
+    direccion: "Parque Plaza Libertad",
     rating: 5,
-    menu: [_steak, _pasta, _pancakes, _burger, _pizza, _salmon]);
+    menu: [_Audifonos, _LaptopDelux, _Mouse, _LaptopNew, _PCRGB, _Redragon]);
 
-final _restaurant3 = Restaurant(
-    imageUrl: "assets/images/restaurant3.jpg",
-    name: "Spice Bazaar",
-    address: "T-01, Off MM Alam Road",
+final _tienda4 = Tienda(
+    imageUrl: "assets/images/tienda-4.jpg",
+    nombre: "PC Universe",
+    direccion: "T-01,Fuera de Alameda Central",
     rating: 4.3,
-    menu: [_burger, _steak, _burger, _pizza, _salmon]);
+    menu: [_LaptopNew, _Audifonos, _LaptopNew, _PCRGB, _Redragon]);
 
-final _restaurant4 = Restaurant(
-    imageUrl: "assets/images/restaurant4.jpg",
-    name: "Cooco's Den",
-    address: "2168/A Food St Fort Rd",
+final _tienda5 = Tienda(
+    imageUrl: "assets/images/tienda-5.jpg",
+    nombre: "Tech Wave",
+    direccion: "2168/Plaza Tecnologico",
     rating: 4.0,
-    menu: [_burger, _ramen, _pancakes, _salmon]);
+    menu: [_LaptopNew, _Perifericos, _Mouse, _Redragon]);
 
 // Restaurants List
 
-final List<Restaurant> restaurants = [
-  _restaurant0,
-  _restaurant1,
-  _restaurant2,
-  _restaurant3,
-  _restaurant4
-];
+final List<Tienda> tienda = [_tienda1, _tienda2, _tienda3, _tienda4, _tienda5];
 
 // User
 
-final currentUser = User(name: "Zeeshan Ahmed", orders: [
-  Order(
-      restaurant: _restaurant2,
-      food: _steak,
-      date: "Apr 30, 2022",
-      quantity: 1),
-  Order(
-      restaurant: _restaurant0,
-      food: _ramen,
-      date: "Apr 28, 2022",
-      quantity: 3),
-  Order(
-      restaurant: _restaurant1,
-      food: _burrito,
-      date: "Apr 30, 2022",
-      quantity: 2),
-  Order(
-      restaurant: _restaurant3,
-      food: _salmon,
-      date: "Apr 30, 2022",
-      quantity: 1),
-  Order(
-      restaurant: _restaurant4,
-      food: _pancakes,
-      date: "Apr 30, 2022",
-      quantity: 1)
+final currentUser = Usuario(nombre: "Luis Montoya", orden: [
+  Order(tienda: _tienda3, pcs: _Audifonos, date: "Apr 30, 2022", quantity: 1),
+  Order(tienda: _tienda1, pcs: _Perifericos, date: "Apr 28, 2022", quantity: 3),
+  Order(tienda: _tienda2, pcs: _Laptop, date: "Apr 30, 2022", quantity: 2),
+  Order(tienda: _tienda4, pcs: _Redragon, date: "Apr 30, 2022", quantity: 1),
+  Order(tienda: _tienda5, pcs: _Mouse, date: "Apr 30, 2022", quantity: 1)
 ], cart: [
-  Order(
-      restaurant: _restaurant2,
-      food: _burger,
-      date: "Apr 29, 2022",
-      quantity: 2),
-  Order(
-      restaurant: _restaurant2,
-      food: _pasta,
-      date: "Apr 30, 2022",
-      quantity: 1),
-  Order(
-      restaurant: _restaurant3,
-      food: _salmon,
-      date: "Apr 30, 2022",
-      quantity: 1),
-  Order(
-      restaurant: _restaurant4,
-      food: _pancakes,
-      date: "Apr 29, 2022",
-      quantity: 3),
-  Order(
-      restaurant: _restaurant1,
-      food: _burrito,
-      date: "Apr 30, 2022",
-      quantity: 2)
+  Order(tienda: _tienda3, pcs: _LaptopNew, date: "Apr 29, 2022", quantity: 2),
+  Order(tienda: _tienda3, pcs: _LaptopDelux, date: "Apr 30, 2022", quantity: 1),
+  Order(tienda: _tienda4, pcs: _Redragon, date: "Apr 30, 2022", quantity: 1),
+  Order(tienda: _tienda5, pcs: _Mouse, date: "Apr 29, 2022", quantity: 3),
+  Order(tienda: _tienda2, pcs: _Laptop, date: "Apr 30, 2022", quantity: 2)
 ]);
